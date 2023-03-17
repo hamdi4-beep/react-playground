@@ -1,0 +1,68 @@
+@forward 'globals';
+
+.App {
+    max-width: 48rem;
+    width: 100%;
+    padding-top: 2em;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 4rem;
+}
+
+.blog-wrapper {
+    position: relative;
+
+    &:hover span::before {
+        width: calc(100% + 2rem);
+    }
+
+    &:hover span::after {
+        height: 10rem;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding: .5em;
+    padding-left: 0;
+    align-items: center;
+
+    span::before,
+    span::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: black;
+        transition: all 500ms ease;
+    }
+
+    span::before {
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        left: -2rem;
+        transition-delay: 400ms;
+    }
+
+    span::after {
+        width: 1px;
+        height: 0;
+        top: 0;
+        left: 1rem;
+    }
+
+    span {
+        display: block;
+        margin-left: -.5em;
+        margin-right: 1em;
+    }
+}
+
+.content {
+    padding: .5em;
+    padding-left: 2em;
+}
