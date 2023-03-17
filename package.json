@@ -7,7 +7,8 @@
     "dev": "vite",
     "tailwind": "npx tailwind -i src/input.css -o src/output.css -w",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
@@ -21,6 +22,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+    "gh-pages": "^5.0.0",
     "react-redux": "^8.0.5",
     "redux": "^4.2.1",
     "sass": "^1.59.2",

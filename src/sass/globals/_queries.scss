@@ -1,0 +1,17 @@
+@media (min-width: 736px) {
+
+    body {
+        display: grid;
+        place-content: center;
+    }
+
+    .blog-wrapper {
+
+        @for $i from 1 through 4 {
+            &:nth-of-type(#{$i + 2}) {
+                margin-top: 2em;
+            }
+        }
+    }
+
+}
