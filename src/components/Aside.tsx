@@ -1,11 +1,11 @@
 function Aside({
-    children
+    index
 }: {
-    children: JSX.Element
+    index: number
 }) {
     return (
         <div className="aside">
-            {children}
+            <span>#{index}</span>
             <div className="icon"></div>
             <div className="icon"></div>
             <div className="icon"></div>

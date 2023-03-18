@@ -1,18 +1,14 @@
-import Aside from "./Aside"
-
 function BlogItem({
     title,
-    index
+    children
 }: {
     title: string,
-    index: number
+    children: JSX.Element
 }) {
 
     return (
         <div className='blog-wrapper'>
-            <Aside>
-                <span>#{index}</span>
-            </Aside>
+            {children}
 
             <div className="inner">
                 <div className="header">
