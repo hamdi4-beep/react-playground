@@ -1,17 +1,13 @@
 @forward 'globals';
 
-.App {
-    width: 100%;
-    max-width: 48rem;
-    margin-inline: auto;
-}
-
 .blog-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 2rem;
     background-color: #EEE;
     padding: 2em;
+    width: 100%;
+    max-width: 48rem;
     border-radius: 20px;
 }
 
@@ -53,8 +49,9 @@
 
         span {
             display: block;
-            margin-bottom: 3em;
-            margin-top: .5em;
+            text-align: center;
+            margin-bottom: 2.5em;
+            line-height: 2;
         }
     }
 

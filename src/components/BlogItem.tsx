@@ -6,9 +6,11 @@ function BlogItem({
     children: JSX.Element
 }) {
 
+    const aside = children
+
     return (
         <div className='blog-wrapper'>
-            {children}
+            {aside}
 
             <div className="inner">
                 <div className="header">

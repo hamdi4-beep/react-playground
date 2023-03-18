@@ -1,17 +1,17 @@
 import Aside from "./Aside"
 import BlogItem from "./BlogItem"
 
-function BlogList() {
-    const titles = [
-        'Minimalistic',
-        'UI/UX'
-    ]
+function BlogList({
+    titles
+}: {
+    titles: string[]
+}) {
 
     return (
         <div className="blog-list">
             {titles.map((title, i) => (
                 <BlogItem title={title} key={i}>
-                    <Aside index={i} />
+                    <Aside index={i + 1} />
                 </BlogItem>
             ))}
         </div>
