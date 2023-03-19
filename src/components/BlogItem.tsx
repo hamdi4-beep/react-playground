@@ -8,17 +8,6 @@ function BlogItem({
     children: JSX.Element
 }) {
     const aside = children
-    const inputRef = React.createRef<HTMLInputElement>()
-
-    const handleSubmit = (e: React.SyntheticEvent) => {
-        const { current } = inputRef
-        const title = current?.value
-
-        if (!title) return
-        console.log(title)
-
-        e.preventDefault()
-    }
 
     return (
         <div className='blog-wrapper'>
@@ -31,10 +20,6 @@ function BlogItem({
 
                 <div className="content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam error ipsam aut quam sit culpa cupiditate voluptates eius placeat quidem.</p>
-                    
-                    <form onSubmit={handleSubmit}>
-                        <input type="text" ref={inputRef} />
-                    </form>
                 </div>
             </div>
         </div>
