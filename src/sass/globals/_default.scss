@@ -19,3 +19,11 @@ input {
     border: 1px solid #777;
     border-radius: 10px;
 }
+
+picture,
+video,
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}

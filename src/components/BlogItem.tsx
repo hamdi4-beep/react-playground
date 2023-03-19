@@ -2,15 +2,17 @@ import * as React from 'react'
 
 function BlogItem({
     title,
+    handleMouseEnter,
     children
 }: {
     title: string,
+    handleMouseEnter: Function
     children: JSX.Element
 }) {
     const aside = children
 
     return (
-        <div className='blog-wrapper'>
+        <div className='blog-wrapper' onMouseEnter={(e) => handleMouseEnter()}>
             {aside}
 
             <div className="inner">

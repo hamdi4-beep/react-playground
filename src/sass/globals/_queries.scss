@@ -2,7 +2,11 @@
 
     body {
         display: grid;
-        place-content: center;
+        align-items: center;
+    }
+
+    .App {
+        padding-inline: 2em;
     }
 
     .blog-wrapper {
