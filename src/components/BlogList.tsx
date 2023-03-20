@@ -1,13 +1,11 @@
+import * as React from 'react'
 import BlogItem from "./BlogItem"
 import Aside from "./Aside"
-import { useDispatch } from "react-redux"
-import { incrementByAmount } from "../indexSlice"
+import { StateContext } from "../context/StateContext"
 
 
 export default function BlogList() {
-    const dispatch = useDispatch()
-
-    const mouseEnterHandle = (e: React.SyntheticEvent, i: number) => dispatch(incrementByAmount(i))
+    const {setIndex} = React.useContext(StateContext)
 
     const titles = [
         'Minimalistic',
@@ -19,7 +17,7 @@ export default function BlogList() {
     return (
         <div className="blog-list">
             {titles.map((title: string, i: number) => (
-                <BlogItem title={title} handleMouseEnter={(e) => mouseEnterHandle(e, i)} key={i}>
+                <BlogItem title={title} handleMouseEnter={e => setIndex(i)} key={i}>
                     <Aside index={i + 1} />
                 </BlogItem>
             ))}
