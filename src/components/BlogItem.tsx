@@ -3,14 +3,15 @@ import { MouseEventHandler } from 'react'
 function BlogItem({
     title,
     children, // aside element
-    handleMouseEnter
+    handleClick
 }: {
     title: string
     children: JSX.Element
-    handleMouseEnter: MouseEventHandler
+    handleClick: MouseEventHandler
 }) {
+
     return (
-        <div className='blog-wrapper' onMouseEnter={handleMouseEnter}>
+        <div className='blog-wrapper' onClick={handleClick}>
             {children}
 
             <div className="inner">

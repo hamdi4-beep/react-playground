@@ -3,6 +3,11 @@ import BlogItem from "./BlogItem"
 import { StateContext } from "../context/StateContext"
 import Aside from './Aside'
 
+type State = {
+    titles: {
+        value: string[]
+    }
+}
 
 export default function BlogList() {
     const {setIndex} = React.useContext(StateContext)
@@ -10,14 +15,14 @@ export default function BlogList() {
     const titles = [
         'Minimalistic',
         'UI/UX',
-        'Motion Design',
-        'Graphic Design'
+        'Motion',
+        'Blur'
     ]
 
     return (
         <div className="blog-list">
             {titles.map((title: string, i: number) => (
-                <BlogItem title={title} handleMouseEnter={e => setIndex(i)} key={i}>
+                <BlogItem title={title} handleClick={e => setIndex(i)} key={i}>
                     <Aside index={i + 1} />
                 </BlogItem>
             ))}
