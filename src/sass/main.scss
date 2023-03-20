@@ -9,9 +9,9 @@
     }
 
     .cover-img {
-        height: calc(454px / 2);
         border-radius: 20px;
         overflow: hidden;
+        height: 100%;
         transition: height 500ms ease;
 
         &.full-height {

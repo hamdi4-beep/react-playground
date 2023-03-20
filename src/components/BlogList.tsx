@@ -1,7 +1,7 @@
 import * as React from 'react'
 import BlogItem from "./BlogItem"
-import Aside from "./Aside"
 import { StateContext } from "../context/StateContext"
+import Aside from './Aside'
 
 
 export default function BlogList() {
