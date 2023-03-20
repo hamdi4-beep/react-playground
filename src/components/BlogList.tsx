@@ -1,18 +1,28 @@
-import * as React from 'react'
-import Aside from "./Aside"
 import BlogItem from "./BlogItem"
+import Aside from "./Aside"
+import { useDispatch } from "react-redux"
+import { incrementByAmount } from "../indexSlice"
 
-function BlogList({
-    children
-}: {
-    children: JSX.Element
-}) {
+
+export default function BlogList() {
+    const dispatch = useDispatch()
+
+    const mouseEnterHandle = (e: React.SyntheticEvent, i: number) => dispatch(incrementByAmount(i))
+
+    const titles = [
+        'Minimalistic',
+        'UI/UX',
+        'Motion Design',
+        'Graphic Design'
+    ]
 
     return (
         <div className="blog-list">
-            {children}
+            {titles.map((title: string, i: number) => (
+                <BlogItem title={title} handleMouseEnter={(e) => mouseEnterHandle(e, i)} key={i}>
+                    <Aside index={i + 1} />
+                </BlogItem>
+            ))}
         </div>
     )
 }
-
-export default BlogList

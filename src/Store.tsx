@@ -1,16 +1,8 @@
-import * as React from 'react'
+import { configureStore } from '@reduxjs/toolkit'
+import indexReducer from './indexSlice'
 
-type CounterState = {
-    counter: number
-}
-
-type Action = {
-    type: string
-}
-
-const value: [
-    CounterState?,
-    React.Dispatch<Action>?
-] = []
-
-export const StoreContext = React.createContext(value)
+export default configureStore({
+  reducer: {
+    index: indexReducer
+  },
+})

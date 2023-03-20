@@ -12,6 +12,11 @@
         height: calc(454px / 2);
         border-radius: 20px;
         overflow: hidden;
+        transition: height 500ms ease;
+
+        &.full-height {
+            height: 100%;
+        }
 
         img {
             width: 100%;

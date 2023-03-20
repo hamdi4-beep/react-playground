@@ -1,4 +1,5 @@
-import * as React from 'react'
+import { MouseEventHandler } from 'react'
+import { useDispatch } from 'react-redux'
 
 function BlogItem({
     title,
@@ -6,13 +7,13 @@ function BlogItem({
     children
 }: {
     title: string,
-    handleMouseEnter: Function
+    handleMouseEnter: MouseEventHandler
     children: JSX.Element
 }) {
     const aside = children
 
     return (
-        <div className='blog-wrapper' onMouseEnter={(e) => handleMouseEnter()}>
+        <div className='blog-wrapper' onMouseEnter={handleMouseEnter}>
             {aside}
 
             <div className="inner">
