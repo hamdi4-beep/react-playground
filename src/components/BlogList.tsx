@@ -3,12 +3,6 @@ import BlogItem from "./BlogItem"
 import { StateContext } from "../context/StateContext"
 import Aside from './Aside'
 
-type State = {
-    titles: {
-        value: string[]
-    }
-}
-
 export default function BlogList() {
     const {setIndex} = React.useContext(StateContext)
 

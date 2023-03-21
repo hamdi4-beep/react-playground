@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { motion } from 'framer-motion'
 import { StateContext } from "./context/StateContext"
 import BlogList from "./components/BlogList"
 
@@ -12,6 +13,11 @@ function App() {
         'https://www.wallpaperflare.com/static/240/421/195/persona-series-persona-wallpaper.jpg'
     ]
 
+    const animation = {
+        opacity: [0, .5, 1],
+        x: ['-100%', '-5%', '0%']
+    }
+
     return (
         <div className='App'>
             <StateContext.Provider value={{index, setIndex}}>
@@ -19,9 +25,9 @@ function App() {
             </StateContext.Provider>
 
             <div className="right-side">
-                <div className="cover-img">
-                    <img src={imgs[index]} alt="" />
-                </div>
+                <motion.div animate={animation} key={index} className="cover-img">
+                    <img  src={imgs[index]} alt="" />
+                </motion.div>
             </div>
         </div>
     )

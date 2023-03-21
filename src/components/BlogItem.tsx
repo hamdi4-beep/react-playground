@@ -9,7 +9,6 @@ function BlogItem({
     children: JSX.Element
     handleClick: MouseEventHandler
 }) {
-
     return (
         <div className='blog-wrapper' onClick={handleClick}>
             {children}
