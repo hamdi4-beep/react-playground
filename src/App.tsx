@@ -15,7 +15,8 @@ function App() {
 
     const animation = {
         opacity: [0, .5, 1],
-        x: ['-100%', '-5%', '0%']
+        x: ['-100%', '-5%', '0%'],
+        height: ['0px', (512 / 2) + 'px', '512px']
     }
 
     return (
@@ -25,7 +26,7 @@ function App() {
             </StateContext.Provider>
 
             <div className="right-side">
-                <motion.div animate={animation} key={index} className="cover-img">
+                <motion.div animate={animation} key={index} layout className="cover-img">
                     <img  src={imgs[index]} alt="" />
                 </motion.div>
             </div>
