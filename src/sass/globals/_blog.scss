@@ -1,0 +1,69 @@
+.blog-wrapper {
+    position: relative;
+    display: flex;
+    line-height: 1;
+
+    &:hover
+    .header::after {
+        width: 100%;
+    }
+
+    &:hover
+    .aside::after {
+        height: 100%;
+        transition-delay: 300ms;
+    }
+
+    .header::after,
+    .aside::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: white;
+        transition: all 500ms ease;
+    }
+
+    .aside {
+        position: relative;
+        padding-right: 1em;
+
+        &::after {
+            width: 1px;
+            height: 0%;
+            top: 0;
+            right: 0;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            margin-bottom: 2.5em;
+            line-height: 2;
+        }
+    }
+
+    .header {
+        padding-inline: 1em;
+        margin-bottom: 1em;
+
+        &::after {
+            width: 0%;
+            height: 1px;
+            left: 0;
+            transform: translateY(1em);
+        }
+
+        h1 {
+            line-height: 1;
+        }
+    }
+
+    .content {
+        padding-left: 1em;
+        padding-top: 1em;
+
+        p {
+            line-height: 1.6;
+        }
+    }
+}
