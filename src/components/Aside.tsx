@@ -1,8 +1,10 @@
+type Props = {
+    index: number
+}
+
 function Aside({
     index
-}: {
-    index: number
-}) {
+}: Props) {
     return (
         <div className="aside">
             <span>#{index}</span>

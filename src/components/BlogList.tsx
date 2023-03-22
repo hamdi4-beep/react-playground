@@ -17,7 +17,7 @@ const BlogList = React.forwardRef<HTMLDivElement>((props, ref) => {
         <div className="blog-list" ref={ref}>
             <React.Fragment>
                 {titles.map((title: string, i: number) => (
-                    <BlogItem title={title} handleClick={e => setIndex(i)} key={i}>
+                    <BlogItem title={title} handleClick={(e) => setIndex((i))} key={i}>
                         <Aside index={i + 1} />
                     </BlogItem>
                 ))}
