@@ -16,8 +16,8 @@ function App() {
     ]
 
     const animation = {
-        opacity: [0, .4, 1],
-        x: ['-100%', '-10%', '0%'],
+        opacity: [0, .2, .4, 1],
+        x: ['-80%', '0%', '0%'],
         height: ['0px', (height / 2) + 'px', `${height}px`]
     }
 

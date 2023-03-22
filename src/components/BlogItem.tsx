@@ -1,14 +1,16 @@
 import { MouseEventHandler } from 'react'
 
+type Item = {
+    title: string
+    children: JSX.Element
+    handleClick: MouseEventHandler
+}
+
 function BlogItem({
     title,
     children, // aside element
     handleClick
-}: {
-    title: string
-    children: JSX.Element
-    handleClick: MouseEventHandler
-}) {
+}: Item) {
     return (
         <div className='blog-wrapper' onClick={handleClick}>
             {children}
