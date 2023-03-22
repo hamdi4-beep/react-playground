@@ -29,7 +29,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 2rem;
-    background-color: #EEE;
+    background-color: #111;
+    color: white;
     padding: 2em;
     width: 100%;
     max-width: 48rem;
@@ -47,10 +48,10 @@
         height: calc(50% + 2.5rem);
         background-image: radial-gradient(
             circle at center,
-            black 0,
+            yellow 0,
+            yellow 1px,
             black 1px,
-            white 1px,
-            white 100%);
+            black 100%);
         background-repeat: repeat;
         background-position: left center;
         background-size: 15px 15px;
@@ -80,7 +81,7 @@
         content: '';
         display: block;
         position: absolute;
-        background-color: black;
+        background-color: white;
         transition: all 500ms ease;
     }
 
@@ -132,7 +133,7 @@
 .icon {
     width: 25px;
     height: 25px;
-    border: 1px solid black;
+    border: 1px solid yellow;
     border-radius: 100%;
 
     &:not(:last-of-type) {
